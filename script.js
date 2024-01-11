@@ -1,37 +1,35 @@
-// Jai shree Ram 
-// Code Net
 
 
 function send() {
-   var input_msg = document.getElementById('msg_text').value; // get user input value
-   var tab = document.getElementById('tab'); // target 'tab' Div
+   var input_msg = document.getElementById('msg_text').value; 
+   var tab = document.getElementById('tab'); 
 
    if (input_msg != '') {
-      var new_msg = document.createElement('div'); // create a div for message
-      new_msg.setAttribute('class', 'msg'); // set class of Div
-      var newId = generateUniqueId(); // Unique ID generate karne ka function call
-      new_msg.setAttribute('id', newId); // set unique id of div
+      var new_msg = document.createElement('div'); 
+      new_msg.setAttribute('class', 'msg'); 
+      var newId = generateUniqueId(); 
+      new_msg.setAttribute('id', newId); 
       tab.appendChild(new_msg);
 
       var msg_box = document.getElementById(newId);
-      var msg_text = document.createElement('span'); // create span for text
-      msg_text.innerText = input_msg; // set user input value in span
+      var msg_text = document.createElement('span'); 
+      msg_text.innerText = input_msg; 
       msg_box.appendChild(msg_text);
 
-      const user_msg = input_msg;  // store user input in variable
-      document.getElementById('msg_text').value = ''; // clear input box
+      const user_msg = input_msg;  
+      document.getElementById('msg_text').value = ''; 
 
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function () {
          if (this.readyState == 4 && this.status == 200) {
-            // Typical action to be performed when the document is ready:
+       
             const responseData = JSON.parse(xhttp.responseText);
             const answerValue = responseData.answer;
             console.log(answerValue);
 
             var ai_msg = document.createElement('div');
             ai_msg.setAttribute('class', 'msg1');
-            var newId = generateUniqueId(); // Unique ID generate karne ka function call
+            var newId = generateUniqueId(); 
             ai_msg.setAttribute('id', newId);
             console.log(newId);
             tab.appendChild(ai_msg);
@@ -47,13 +45,13 @@ function send() {
       xhttp.send();
    }
 
-   // genrate random id for div 
+
 
    function generateUniqueId() {
-      return 'id_' + Math.random().toString(36).substr(2, 9); // Random ID generation
+      return 'id_' + Math.random().toString(36).substr(2, 9); 
    }
 }
-// function for redirect you on my instagram page
+
 function insta() {
-   location = 'https://www.instagram.com/c0denet/';
+   location = 'https://www.instagram.com/hailemichael/';
 }

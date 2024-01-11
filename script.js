@@ -1,5 +1,3 @@
-// Jai shree Ram 
-// Code Net
 
 
 function send() {

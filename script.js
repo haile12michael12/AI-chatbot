@@ -53,10 +53,6 @@ function send() {
 }
 
 function insta() {
-<<<<<<< HEAD
    location = 'https://www.instagram.com/hailemichael/';
 }
-=======
-   location = 'https://www.instagram.com/c0denet/';
-}
->>>>>>> 44fd850f41efdb0f9a377010bcfa1a0b424e8af8
+
